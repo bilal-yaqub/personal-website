@@ -19,11 +19,32 @@ html, body {
 h1, h2, h3, 
 h4, h5, h6, strong {
     color: var(--mainText);
+    font-family: 'Russo One', sans-serif;
 }
 
 /* Making the paragraphs and attributes look different */
 p, li, span, label, input, textarea {
-    color: var(--secondaryText)
+    color: var(--secondaryText);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Changing the sizes of the headings so they look better */
+h1 { font-size: 56px; }
+h2 { font-size: 36px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+
+/* Making sure the links arent underlined */
+a {
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+/* Making sure there are no bullet points in the list */
+ul {
+    list-style: none;
 }
 
 /* Setting the styling for the first section */
@@ -38,4 +59,26 @@ p, li, span, label, input, textarea {
     background-color: var(--secondaryColour);
     border-bottom: 1px solid var(--borderColour);
     overflow: auto;
+}
+
+/* Setting the proportions for the main container present within each section */
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* Editing the first section */
+.greeting-wrapper {
+    display: grid;
+    min-height: 20em;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+/* Making sure it stays centered as I change the screen size  */
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 95%
+    }
 }
