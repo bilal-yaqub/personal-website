@@ -70,10 +70,41 @@ ul {
 /* Editing the first section */
 .greeting-wrapper {
     display: grid;
-    min-height: 20em;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
+    min-height: 10em;
+    align-content: center;
+    text-align: center;
+    border: 2px dotted black;
+}
+
+.intro-wrapper {
+    background-color: var(--secondaryColour);
+    border: 1px solid var(--borderColour);
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 30em;
+    grid-template-areas: 
+        'nav-wrapper nav-wrapper'
+        'left-column right-column'
+    
+    ;
+}
+
+.nav-wrapper {
+    grid-area: nav-wrapper;
+    border: 1px solid lightcoral;
+}
+
+.left-column {
+    grid-area: left-column;
+    border: 1px solid lightcoral;
+}
+
+.right-column {
+    grid-area: right-column;
+    border: 1px solid lightcoral;
 }
 
 /* Making sure it stays centered as I change the screen size  */
